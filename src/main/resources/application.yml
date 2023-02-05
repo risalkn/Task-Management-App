@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      show-sql: true
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 12345
+    initialization-mode: always
+    initialize: true
+    continue-on-error: true

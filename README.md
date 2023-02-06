@@ -22,9 +22,16 @@
 
     example PostgresSQL database username and password. 
 
--Run Application from  **TaskManagementAppApplication**
+-Run Application from  **TaskManagementAppApplication** on Docker
 
+    Note :make sure Docker is runing on machine 
     Run on termical 'docker-compose up'
+    The application will run on http://localhost:8080/
+
+-Run Application from  **TaskManagementAppApplication** on Local
+
+    Update src/main/resources/application.yml  
+            jdbc:postgresql://postgresqldb:5432/postgres to jdbc:postgresql://localhost:5432/postgres
     The application will run on http://localhost:8080/
 
 -Swagger UI enabled So we can test APIs with below link.

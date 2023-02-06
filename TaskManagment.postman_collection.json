@@ -1,0 +1,157 @@
+{
+  "info": {
+    "_postman_id": "5ca495d2-af4b-41c9-b09a-64b4456c1487",
+    "name": "TaskManagment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "get All Tasks",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/task/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "task",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get Task by id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/task/14",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "task",
+            "14"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete Task by id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/task/18",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "task",
+            "18"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Modified Task",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"World  test 123\",\"description\":\"Hello world task I need to complete in test 123.\",\"status\":\"Not Started\",\"createdAt\":\"2021-10-12T13:54:34.123Z\",\"dueDate\":\"2021-11-02T09:00:00.000Z\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/task/14",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "task",
+            "14"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Task",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Hello, World!\",\"description\":\"Hello world task I need to complete.\",\"status\":\"NotStarted\",\"createdAt\":\"2021-10-12T13:54:34.123Z\",\"dueDate\":\"2021-11-02T09:00:00.000Z\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/task/createTask",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "task",
+            "createTask"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Tasks",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[{\"name\":\"Hello, World!\",\"description\":\"Hello world task I need to complete.\",\"status\":\"NotStarted\",\"createdAt\":\"2021-10-12T13:54:34.123Z\",\"dueDate\":\"2021-11-02T09:00:00.000Z\"},\n{\"name\":\"Hello, World 2\",\"description\":\"Hello world task I need to complete.2\",\"status\":\"Not Started\",\"createdAt\":\"2021-10-12T13:54:34.123Z\",\"dueDate\":\"2021-11-02T09:00:00.000Z\"}]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/task/createTasks",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "task",
+            "createTasks"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
